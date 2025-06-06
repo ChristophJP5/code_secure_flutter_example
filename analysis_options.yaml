@@ -1,0 +1,21 @@
+include: package:code_secure_flutter/analysis_options_1.0.0.yaml
+
+custom_lint:
+  rules:
+    - avoid_long_and_complex_functions:
+      error_severity: Warning
+      function_max_char_count: 1100
+    - avoid_nesting:
+      error_severity: Warning
+      nesting_max_depth: 2
+    - parameter_assert_required:
+      error_severity: Warning
+      exclude_parameter_types: 
+        - TestType
+        - TestType?
+    - avoid_async_void: 
+      error_severity: Warning
+
+analyzer:
+  plugins:
+    - custom_lint
