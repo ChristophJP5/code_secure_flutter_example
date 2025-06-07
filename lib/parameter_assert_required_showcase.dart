@@ -1,24 +1,27 @@
+// This file is part of the example package.
+// ignore_for_file: public_member_api_docs
 // #ignore_for_file: parameter_assert_required
-import 'package:flutter/foundation.dart';
 
-checkAssertSingleParameter(int parameter) {
+import "package:flutter/foundation.dart";
+
+void checkAssertSingleParameter(int parameter) {
   //
 }
 
-checkAssertSingleParameterWithAssert(int parameter) {
-  const int parameterMinValue = 0;
+void checkAssertSingleParameterWithAssert(int parameter) {
+  const parameterMinValue = 0;
   assert(
     parameter > parameterMinValue,
     "parameter must be greater than $parameterMinValue, is: $parameter",
   );
-  const int parameterMaxValue = 0x20000000000000;
+  const parameterMaxValue = 0x20000000000000;
   assert(
     parameter < parameterMaxValue,
     "parameter must be less than $parameterMaxValue, is: $parameter",
   );
 }
 
-checkAssertMultipleParameterOneAssert(
+void checkAssertMultipleParameterOneAssert(
   int parameter,
   double additionalParameter,
 ) {
@@ -27,14 +30,14 @@ checkAssertMultipleParameterOneAssert(
     additionalParameter > additionalParameterMinValue,
     "additionalParameter must be greater than $additionalParameterMinValue, is: $additionalParameter",
   );
-  const double additionalParameterMaxValue = double.maxFinite;
+  const additionalParameterMaxValue = double.maxFinite;
   assert(
     additionalParameter < additionalParameterMaxValue,
     "additionalParameter must be less than $additionalParameterMaxValue, is: $additionalParameter",
   );
 }
 
-checkAssertMultipleParameterWithAssert(
+void checkAssertMultipleParameterWithAssert(
   int parameter,
   double additionalParameter,
 ) {
@@ -43,18 +46,18 @@ checkAssertMultipleParameterWithAssert(
     additionalParameter > additionalParameterMinValue,
     "additionalParameter must be greater than $additionalParameterMinValue, is: $additionalParameter",
   );
-  const double additionalParameterMaxValue = double.maxFinite;
+  const additionalParameterMaxValue = double.maxFinite;
   assert(
     additionalParameter < additionalParameterMaxValue,
     "additionalParameter must be less than $additionalParameterMaxValue, is: $additionalParameter",
   );
 
-  const int parameterMinValue = 0;
+  const parameterMinValue = 0;
   assert(
     parameter > parameterMinValue,
     "parameter must be greater than $parameterMinValue, is: $parameter",
   );
-  const int parameterMaxValue = 0x20000000000000;
+  const parameterMaxValue = 0x20000000000000;
   assert(
     parameter < parameterMaxValue,
     "parameter must be less than $parameterMaxValue, is: $parameter",

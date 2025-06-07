@@ -1,11 +1,15 @@
-import 'package:flutter/foundation.dart';
+// This file is part of the example package.
+// ignore_for_file: public_member_api_docs
+// #ignore_for_file: check_return_value
+
+import "package:flutter/foundation.dart";
 
 int returns4TrustMe() {
   return 4;
 }
 
 // gets not flagged by custom rule. because passthrough and global vars don't have to be checked.
-final test = () => returns4TrustMe();
+const test = returns4TrustMe;
 final anotherTest = returns4TrustMe();
 
 // classic approach, using if to check the return value

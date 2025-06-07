@@ -1,11 +1,13 @@
+// This file is part of the example package.
+// ignore_for_file: public_member_api_docs
 // #ignore_for_file: avoid_nesting
 
-import 'package:flutter/foundation.dart';
+import "package:flutter/foundation.dart";
 
-nestedFunction4() {
-  final test1 = 1;
-  final test2 = 2;
-  final test3 = 3;
+void nestedFunction4() {
+  const test1 = 1;
+  const test2 = 2;
+  const test3 = 3;
   if (test1 == 1) {
     if (test2 == 2) {
       if (test3 == 3) {
@@ -21,9 +23,9 @@ nestedFunction4() {
   }
 }
 
-nestedFunction3() {
-  final test1 = 1;
-  final test2 = 2;
+void nestedFunction3() {
+  const test1 = 1;
+  const test2 = 2;
   if (test1 == 1) {
     if (test2 == 2) {
       if (kDebugMode) {
@@ -37,8 +39,8 @@ nestedFunction3() {
   }
 }
 
-nestedFunction2() {
-  final test1 = 1;
+void nestedFunction2() {
+  const test1 = 1;
   if (test1 == 1) {
     if (kDebugMode) {
       print("All tests passed");
@@ -50,17 +52,17 @@ nestedFunction2() {
   }
 }
 
-nestedFunction1() {
+void nestedFunction1() {
   if (kDebugMode) {
     print("All tests passed");
   }
 }
 
 class AvoidNestingShowcase {
-  nestedFunction4() {
-    final test1 = 1;
-    final test2 = 2;
-    final test3 = 3;
+  void nestedFunction4() {
+    const test1 = 1;
+    const test2 = 2;
+    const test3 = 3;
     if (test1 == 1) {
       if (test2 == 2) {
         if (test3 == 3) {
@@ -76,9 +78,9 @@ class AvoidNestingShowcase {
     }
   }
 
-  nestedFunction3() {
-    final test1 = 1;
-    final test2 = 2;
+  void nestedFunction3() {
+    const test1 = 1;
+    const test2 = 2;
     if (test1 == 1) {
       if (test2 == 2) {
         if (kDebugMode) {
@@ -92,8 +94,8 @@ class AvoidNestingShowcase {
     }
   }
 
-  nestedFunction2() {
-    final test1 = 1;
+  void nestedFunction2() {
+    const test1 = 1;
     if (test1 == 1) {
       if (kDebugMode) {
         print("All tests passed");
@@ -105,7 +107,7 @@ class AvoidNestingShowcase {
     }
   }
 
-  nestedFunction1() {
+  void nestedFunction1() {
     if (kDebugMode) {
       print("All tests passed");
     }

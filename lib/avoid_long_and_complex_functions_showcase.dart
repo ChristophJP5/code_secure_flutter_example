@@ -1,8 +1,8 @@
-library;
-// 
-// ignore_for_file: avoid_long_and_complex_functions
+//  This is a showcase of a long and complex function that violates the
+// ignore_for_file: public_member_api_docs
+// #ignore_for_file: avoid_long_and_complex_functions,
 
-import 'package:flutter/foundation.dart';
+import "package:flutter/foundation.dart";
 
 /// This is a showcase of a long and complex function that violates the
 /// avoid_long_and_complex_functions rule.
@@ -91,12 +91,15 @@ int longFunction(int demoParameter) {
   result++;
   result++;
   result++;
+  result++;
+  result++;
+  result++;
 
   return result;
 }
 
 void addDeclarationListener() {
-  final demo = 40;
+  const demo = 40;
   for (var i = 0; i < demo; i++) {
     if (i > 20 || i < 10) {
     } else {}

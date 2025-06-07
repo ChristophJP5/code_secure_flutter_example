@@ -13,7 +13,11 @@ custom_lint:
       exclude_parameter_types: 
         - TestType
         - TestType?
-    - avoid_async_void: 
+    - avoid_recursion: 
+      error_severity: Warning
+    - check_return_value: 
+      error_severity: Warning
+    - loops_require_fixed_bound: 
       error_severity: Warning
 
 analyzer:
