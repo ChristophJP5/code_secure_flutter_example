@@ -1,8 +1,9 @@
 // This file is part of the example package.
 // ignore_for_file: public_member_api_docs
-// #ignore_for_file: parameter_assert_required
+// #ignore_for_file: require_parameter_assert
 
 import "package:flutter/foundation.dart";
+import "package:flutter/widgets.dart";
 
 void checkAssertSingleParameter(int parameter) {
   //
@@ -65,10 +66,8 @@ void checkAssertMultipleParameterWithAssert(
 }
 
 class ExampleParameterAssertRequiredShowcase {
-  ExampleParameterAssertRequiredShowcase(int demo) {
-    if (kDebugMode) {
-      print(demo);
-    }
+  ExampleParameterAssertRequiredShowcase(int demo, VoidCallback callback) {
+    assert(demo > 0, "demo must be greater than 0, is: $demo");
   }
 
   void methodCheckAssertSingleParameter(int parameter) {}
@@ -93,5 +92,35 @@ class ExampleParameterAssertRequiredShowcase {
       additionalParameter > 0,
       "additionalParameter must be greater than 0, is: $additionalParameter",
     );
+  }
+}
+
+class OptInPage extends StatefulWidget {
+  /// Creates a new OptInPage.
+  OptInPage({
+    required this.keyValue,
+    required this.width,
+    required this.onPressedToLogin,
+    required this.onPressedToLogin2,
+    super.key,
+  }) : assert(keyValue.isNotEmpty, "keyValue must not be empty, is: $keyValue"),
+       assert(width > 0, "width must be greater than 0, is: $width"),
+       assert(
+         width < double.maxFinite,
+         "width must be less than double.maxFinite, is: $width",
+       );
+  final String keyValue;
+  final double width;
+  final VoidCallback onPressedToLogin;
+  final VoidCallback? onPressedToLogin2;
+  @override
+  State<OptInPage> createState() => _OptInPageState();
+}
+
+class _OptInPageState extends State<OptInPage> {
+  /// The key value for the page.
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: Text("Opt-in Page with key"));
   }
 }

@@ -15,7 +15,6 @@ dev_dependencies:
   custom_lint: ^0.7.3
   code_secure_flutter: 
     path: ../code_secure_flutter
-  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true

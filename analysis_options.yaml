@@ -1,5 +1,9 @@
 include: package:code_secure_flutter/analysis_options_1.0.0.yaml
 
+analyzer:
+  plugins:
+    - custom_lint
+    
 custom_lint:
   rules:
     - avoid_long_and_complex_functions:
@@ -8,7 +12,7 @@ custom_lint:
     - avoid_nesting:
       error_severity: Warning
       nesting_max_depth: 2
-    - parameter_assert_required:
+    - require_parameter_assert:
       error_severity: Warning
       exclude_parameter_types: 
         - TestType
@@ -19,7 +23,3 @@ custom_lint:
       error_severity: Warning
     - loops_require_fixed_bound: 
       error_severity: Warning
-
-analyzer:
-  plugins:
-    - custom_lint
